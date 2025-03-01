@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body class="center">
+    <div id="cont-form">
+        <form action="" method="post">
+            <div id="cont-header" class="center">
+                <h1>LOGIN FORM</h1>
+            </div>
+
+            <div id="cont-input">
+                <input type="text" name="username" id="input-username" placeholder="Username">
+                <div id="line"></div>
+            </div>
+            
+            <div id="cont-input">
+                <input type="password" name="password" id="input-password" placeholder="Password">
+                <div id="line"></div>
+            </div>
+
+            <div id="cont-btn" class="center">
+                <button type="submit" name="btn-submit" id="btn-submit">LOGIN</button>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        let contForm = document.getElementById('cont-form');
+        let inputUsername = document.getElementById('input-username');
+        let inputPassword = document.getElementById('input-password');
+        
+        inputUsername.addEventListener('focus', () => {
+            contForm.classList.add("form-active");
+            contForm.style.border = "2px solid #fff";
+        });
+
+        inputUsername.addEventListener('blur', () => {
+            contForm.classList.remove("form-active");
+            contForm.style.border = "";
+
+            if(inputUsername.value != ""){
+                contForm.classList.add("form-active");
+                contForm.style.border = "2px solid #fff";
+            }
+            else{
+                contForm.classList.remove("form-active");
+                contForm.style.border = "";
+            }
+        });
+
+        inputPassword.addEventListener('focus', () => {
+            contForm.classList.add("form-active");
+            contForm.style.border = "2px solid #fff";
+        });
+
+        inputPassword.addEventListener('blur', () => {
+            contForm.classList.remove("form-active");
+            contForm.style.border = "";
+            
+            if(inputUsername.value != ""){
+                contForm.classList.add("form-active");
+                contForm.style.border = "2px solid #fff";
+            }
+            else{
+                contForm.classList.remove("form-active");
+                contForm.style.border = "";
+            }
+        });
+    </script>
+</body>
+</html>
